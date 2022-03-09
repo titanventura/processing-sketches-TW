@@ -27,9 +27,13 @@ public class FirstSketch extends PApplet {
 
     @Override
     public void draw() {
+        progressBallOnAllTheStreams();
+        horizontalPosition++;
+    }
+
+    private void progressBallOnAllTheStreams() {
         for (int i = 1; i <= numStreams; i++) {
             ellipse(horizontalPosition * i, fifthOfTheHeight * i, circleDia, circleDia);
         }
-        horizontalPosition++;
     }
 }
