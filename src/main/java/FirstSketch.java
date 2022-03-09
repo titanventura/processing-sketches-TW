@@ -4,9 +4,11 @@ public class FirstSketch extends PApplet {
 
     public static final int WIDTH = 640;
     public static final int HEIGHT = 480;
-    int horizontalPosition = 0;
+
     private int fifthOfTheHeight = HEIGHT / 5;
     private int circleDia = 10;
+    private int numStreams = 4;
+    private int horizontalPosition = 0;
 
     public static void main(String[] args) {
         PApplet.main("FirstSketch", args);
@@ -25,7 +27,6 @@ public class FirstSketch extends PApplet {
 
     @Override
     public void draw() {
-        int numStreams = 4;
         for (int i = 1; i <= numStreams; i++) {
             ellipse(horizontalPosition * i, fifthOfTheHeight * i, circleDia, circleDia);
         }
